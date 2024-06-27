@@ -1,5 +1,5 @@
 {% set name = "pywatershed" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pywatershed-{{ version }}.tar.gz
-  sha256: 65c9bab1a715366895251850c25789562bb11f4d044006b00e53d4f667b8f9fe
+  sha256: 9421cf12c234b13d7f34071bcc616037cc4646108b4202a2b65d2d5a5ad4292b
 
 build:
   noarch: python
