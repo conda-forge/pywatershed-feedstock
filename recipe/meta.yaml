@@ -17,12 +17,14 @@ build:
 requirements:
   host:
     - python >=3.9,<3.11
-    - setuptools >=61
-    - numpy
+    - setuptools <= 72.2.0
+    - importlib_metadata<=7.0.1
+    - numpy < 2.0
+    - twine < 5.0.0
     - pip
   run:
     - python >=3.9,<3.11
-    - numpy >=1.15.0
+    - numpy <2.0
     - matplotlib-base >=1.4.0
     - netcdf4
     - networkx
