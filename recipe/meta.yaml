@@ -6,23 +6,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pywatershed-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pywatershed-{{ version }}.tar.gz
   sha256: 9421cf12c234b13d7f34071bcc616037cc4646108b4202a2b65d2d5a5ad4292b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9,<3.11
-    - setuptools >=61
-    - numpy
+    - python 3.9
+    - setuptools <=72.2.0
+    - importlib_metadata <=7.0.1
+    - numpy <2.0
+    - twine <5.0.0
     - pip
   run:
     - python >=3.9,<3.11
-    - numpy >=1.15.0
+    - numpy <2.0
     - matplotlib-base >=1.4.0
     - netcdf4
     - networkx
@@ -42,6 +44,7 @@ test:
   commands:
     - pip check
   requires:
+    - python 3.9
     - pip
 
 about:
