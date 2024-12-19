@@ -24,10 +24,12 @@ requirements:
     - pip
   run:
     - cartopy
+    - click != 8.1.0
     - dataretrieval
     - contextily
     - epiweeks
     - filelock
+    - flopy
     - folium
     - geopandas
     - geoviews
@@ -40,40 +42,31 @@ requirements:
     - jupyterlab
     - nbconvert
     - netCDF4
-    - matplotlib-base >=1.4.0
     - networkx
-    - numpy >=2.0.0
+    - numpy>=2.0.0
     - numba
-    - pandas >=1.4.0
+    - modflow-devtools
+    - pandas>=1.4.0
     - pint
     - pip
     - pre-commit
     - pydot
-    - pytest !=8.1.0
+    - pytest!=8.1.0
     - pytest-cov
     - pytest-env
     - pytest-order
     - pytest-xdist
-    - python <3.12,>=3.10
+    - python<3.12,>=3.10
     - pyyaml
+    - ruff
     - shapely
     - sphinx
-    - sphinx-book-theme >=0.3.3
+    - sphinx-book-theme>=0.3.3
+    - sphinx-autodoc-typehints>=2.2.1
     - sphinx-autosummary-accessors
     - sphinx-copybutton
     - tqdm
     - xarray>=2024.06.0
-    - pip:
-        - asv
-        - click !=8.1.0
-        - filelock
-        - git+https://github.com/modflowpy/flopy.git
-        - jupyter_black
-        - modflow-devtools
-        - git+https://github.com/jararias/mpsplines.git
-        - git+https://github.com/paknorton/pyPRMS.git@development
-        - sphinx-autodoc-typehints >=2.2.1
-        - ruff
 
 test:
   imports:
