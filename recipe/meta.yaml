@@ -1,5 +1,5 @@
 {% set name = "pywatershed" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,36 +7,67 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pywatershed-{{ version }}.tar.gz
-  sha256: 9421cf12c234b13d7f34071bcc616037cc4646108b4202a2b65d2d5a5ad4292b
+  sha256: 16d905f5a494560db3547b2c27cd9cd60bfe00ef8d1c742e0fd00c233bb0a656
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - python 3.9
+    - python 3.10
     - setuptools <=72.2.0
-    - importlib_metadata <=7.0.1
+    - importlib-metadata <=7.0.1
     - numpy <2.0
     - twine <5.0.0
     - pip
   run:
-    - python >=3.9,<3.11
-    - numpy <2.0
-    - matplotlib-base >=1.4.0
-    - netcdf4
+    - cartopy
+    - click !=8.1.0
+    - dataretrieval
+    - contextily
+    - epiweeks4cf
+    - filelock
+    - flopy
+    - folium
+    - geopandas
+    - geoviews
+    - git
+    - holoviews
+    - hvplot
+    - ipython
+    - ipywidgets
+    - jupyter
+    - jupyterlab
+    - nbconvert
+    - netCDF4
     - networkx
+    - numpy >=2.0.0
     - numba
+    - modflow-devtools
     - pandas >=1.4.0
     - pint
+    - pip
+    - pre-commit
+    - pydot
+    - pytest !=8.1.0
+    - pytest-cov
+    - pytest-env
+    - pytest-order
+    - pytest-xdist
+    - python <3.12,>=3.10
     - pyyaml
+    - ruff
+    - shapely
+    - sphinx
+    - sphinx-book-theme >=0.3.3
+    - sphinx-autodoc-typehints >=2.2.1
+    - sphinx-autosummary-accessors
+    - sphinx-copybutton
     - tqdm
-    - xarray >=2023.5.0
+    - xarray >=2024.06.0
     - xmltodict
-    - epiweeks4cf
-
 
 test:
   imports:
@@ -44,7 +75,7 @@ test:
   commands:
     - pip check
   requires:
-    - python 3.9
+    - python 3.10
     - pip
 
 about:
