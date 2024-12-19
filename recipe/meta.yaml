@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pywatershed-{{ version }}.tar.gz
-  sha256: 16d905f5a494560db3547b2c27cd9cd60bfe00ef8d1c742e0fd00c233bb0a656
+  sha256: 94ef9bf02b6042967059f6eaa922b436cb8cdae7f37ec77ec025ba41f7e7665c
 
 build:
   noarch: python
