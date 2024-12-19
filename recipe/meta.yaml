@@ -1,5 +1,5 @@
 {% set name = "pywatershed" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pywatershed-{{ version }}.tar.gz
-  sha256: 9421cf12c234b13d7f34071bcc616037cc4646108b4202a2b65d2d5a5ad4292b
+  sha256: 16d905f5a494560db3547b2c27cd9cd60bfe00ef8d1c742e0fd00c233bb0a656
 
 build:
   noarch: python
@@ -16,27 +16,63 @@ build:
 
 requirements:
   host:
-    - python 3.9
+    - python 3.10
     - setuptools <=72.2.0
     - importlib_metadata <=7.0.1
     - numpy <2.0
     - twine <5.0.0
     - pip
   run:
-    - python >=3.9,<3.11
-    - numpy <2.0
-    - matplotlib-base >=1.4.0
-    - netcdf4
+    - cartopy
+    - dataretrieval
+    - contextily
+    - epiweeks
+    - filelock
+    - folium
+    - geopandas
+    - geoviews
+    - git
+    - holoviews
+    - hvplot
+    - ipython
+    - ipywidgets
+    - jupyter
+    - jupyterlab
+    - nbconvert
+    - netCDF4
     - networkx
+    - numpy >=2.0.0
     - numba
     - pandas >=1.4.0
     - pint
+    - pip
+    - pre-commit
+    - pydot
+    - pytest !=8.1.0
+    - pytest-cov
+    - pytest-env
+    - pytest-order
+    - pytest-xdist
+    - python <3.12,>=3.10
     - pyyaml
+    - shapely
+    - sphinx
+    - sphinx-book-theme >=0.3.3
+    - sphinx-autosummary-accessors
+    - sphinx-copybutton
     - tqdm
-    - xarray >=2023.5.0
-    - xmltodict
-    - epiweeks4cf
-
+    - xarray>=2024.06.0
+    - pip:
+        - asv
+        - click !=8.1.0
+        - filelock
+        - git+https://github.com/modflowpy/flopy.git
+        - jupyter_black
+        - modflow-devtools
+        - git+https://github.com/jararias/mpsplines.git
+        - git+https://github.com/paknorton/pyPRMS.git@development
+        - sphinx-autodoc-typehints >=2.2.1
+        - ruff
 
 test:
   imports:
@@ -44,7 +80,7 @@ test:
   commands:
     - pip check
   requires:
-    - python 3.9
+    - python 3.10
     - pip
 
 about:
