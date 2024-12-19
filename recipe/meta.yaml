@@ -40,6 +40,7 @@ requirements:
     - jupyterlab
     - nbconvert
     - netCDF4
+    - matplotlib-base >=1.4.0
     - networkx
     - numpy >=2.0.0
     - numba
