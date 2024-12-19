@@ -67,6 +67,7 @@ requirements:
     - sphinx-copybutton
     - tqdm
     - xarray >=2024.06.0
+    - xmltodict
 
 test:
   imports:
