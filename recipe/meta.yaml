@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - cartopy
-    - click != 8.1.0
+    - click !=8.1.0
     - dataretrieval
     - contextily
     - epiweeks
@@ -43,10 +43,10 @@ requirements:
     - nbconvert
     - netCDF4
     - networkx
-    - numpy>=2.0.0
+    - numpy >=2.0.0
     - numba
     - modflow-devtools
-    - pandas>=1.4.0
+    - pandas >=1.4.0
     - pint
     - pip
     - pre-commit
@@ -56,17 +56,17 @@ requirements:
     - pytest-env
     - pytest-order
     - pytest-xdist
-    - python<3.12,>=3.10
+    - python <3.12,>=3.10
     - pyyaml
     - ruff
     - shapely
     - sphinx
-    - sphinx-book-theme>=0.3.3
-    - sphinx-autodoc-typehints>=2.2.1
+    - sphinx-book-theme >=0.3.3
+    - sphinx-autodoc-typehints >=2.2.1
     - sphinx-autosummary-accessors
     - sphinx-copybutton
     - tqdm
-    - xarray>=2024.06.0
+    - xarray >=2024.06.0
 
 test:
   imports:
