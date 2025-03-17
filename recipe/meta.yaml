@@ -13,15 +13,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools <=72.2.0
-    - importlib-metadata <=7.0.1
-    - numpy <2.0
-    - twine <5.0.0
+    - setuptools
+    - importlib-metadata
+    - numpy
+    - twine
     - pip
   run:
     - cartopy
