@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "pywatershed" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pywatershed-{{ version }}.tar.gz
-  sha256: 80e63afa3568a7dbefb977a37a12da1cc4cb2aec8f3b7f1ae3f50c6bab647466
+  sha256: 334b69f88fd876858125358d1bf96550d17867332001e98d3dbb1f3171e032db
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -40,6 +40,7 @@ requirements:
     - ipython
     - ipywidgets
     - jupyter
+    - jupyter-black
     - jupyterlab
     - nbconvert
     - netCDF4
@@ -90,5 +91,4 @@ about:
 extra:
   recipe-maintainers:
     - jmccreight
-    - jdhughes-usgs
     - wpbonelli
