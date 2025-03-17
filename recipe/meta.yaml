@@ -40,7 +40,7 @@ requirements:
     - ipython
     - ipywidgets
     - jupyter
-    - jpuyter-black
+    - jupyter-black
     - jupyterlab
     - nbconvert
     - netCDF4
